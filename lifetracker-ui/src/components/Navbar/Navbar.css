@@ -1,3 +1,68 @@
-.Navbar {
-  padding-top: 20px;
+.navbar {
+  padding-top: 25px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.navbar-link {
+  color: black;
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar-link:visited {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: rgba(0, 0, 0, 0.253);
+  margin-top: 12px;
+  font-size: 17px;
+  border: none;
+  margin-right: 8px;
+  border-radius: 5px;
+  width: 85px;
+  height: 40px;
+}
+
+.sign-in {
+  color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.253);
+}
+
+.sign-in:hover {
+  background-color: rgba(0, 0, 0, 0.466);
+}
+
+.register {
+  color: rgb(0, 0, 0);
+  background-color: rgba(138, 197, 224, 0.575);
+}
+
+.register:hover {
+  background-color: rgba(89, 127, 145, 0.575);
+}
+
+button:active {
+  color: white;
+}
+
+.navbar-link:hover {
+  transition: all 0.2s ease-in-out;
+  transform: translateY(-2px);
+}
+
+.log-buttons {
+  display: flex;
+}
+
+.log-buttons a {
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
 }

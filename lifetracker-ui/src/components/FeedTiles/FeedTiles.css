@@ -1,3 +1,42 @@
 .tiles {
   flex-direction: row;
 }
+
+.tile {
+  display: block;
+  background-color: rgb(20, 116, 116);
+  margin: 10px;
+  border: 1.5px solid rgba(0, 0, 0, 0.432);
+  border-radius: 5px;
+  width: 450px;
+  height: 175px;
+}
+
+.exercise {
+  background-color: rgb(49, 138, 118);
+}
+
+.sleep {
+  background-color: rgb(105, 187, 187);
+}
+
+.nutrition {
+  background-color: rgb(10, 77, 77);
+}
+
+.feed-tile {
+  margin-left: 20px;
+}
+
+.feed-title {
+  padding-top: 20px;
+  font-size: 32px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.feed-info {
+  font-size: 70px;
+  font-weight: bold;
+  color: white;
+}

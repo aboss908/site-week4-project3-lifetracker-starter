@@ -4,3 +4,34 @@
 .SleepPage .button button {
   flex: 1;
 }
+
+.sleep-page {
+  text-align: center;
+}
+
+.sleep-hero {
+  background-color: rgb(126, 212, 212);
+  text-align: center;
+  height: 250px;
+  margin-bottom: 40px;
+}
+
+.sleep-hero h1 {
+  padding-top: 95px;
+  color: white;
+  font-size: 50px;
+}
+
+.sleep-page button {
+  border: none;
+  border-radius: 2px;
+  width: 200px;
+  height: 40px;
+  font-size: 17px;
+  background-color: rgb(126, 139, 139);
+  color: white;
+}
+
+.sleep-page button:active {
+  background-color: black;
+}

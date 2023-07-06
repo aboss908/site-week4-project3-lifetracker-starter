@@ -1,0 +1,68 @@
+.exercise-card {
+    display: block;
+    margin-bottom: 40px;
+}
+
+#exercise-date {
+    text-align: center;
+    padding-right: 225px;
+    margin-bottom: 10px;
+}
+
+.exercise-card-container {
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(17, 85, 62);
+    border-radius: 8px;
+    width: 350px;
+    height: 225px;
+}
+
+.exercise-title {
+    display: flex;
+    padding-top: 30px;
+    padding-left: 30px;
+    height: 60px;
+}
+
+.exercise-title p {
+    margin: 0px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 35px;
+    color: white;
+}
+
+.logo {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    background-color: rgba(132, 198, 255, 0.808);
+    font-size: 35px;
+    color: white;
+    width: 60px;
+    line-height: 60px;
+}
+
+.exercise-stats {
+    display: flex;
+    color: white;
+    padding-top: 40px;
+    padding-left: 32px;
+}
+
+.exercise-stats h3 {
+    font-size: 25px;
+    margin: 0px;
+    padding-top: 5px;
+    padding-right: 30px;
+}
+
+.exercise-stats p {
+    margin: 0px;
+    text-align: left;
+}
+
+.duration {
+    display: block;
+    padding-right: 80px;
+}

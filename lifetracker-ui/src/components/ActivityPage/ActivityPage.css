@@ -1,0 +1,61 @@
+.activity-page {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.activity-container {
+    display: flex;
+    justify-content: center;
+}
+
+.activity-container h1 {
+    width: 50%;
+    padding-left: 62px;
+    margin-bottom: 20px;
+}
+
+.top-info {
+    width: 50%;
+    text-align: right;
+    padding-right: 62px;
+    padding-top: 20px;
+}
+
+.tiles-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    max-width: 1000px;
+}
+
+.button {
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 40px;
+    font-size: 12px;
+    width: 105px;
+}
+
+.button:active {
+    background-color: black;
+}
+
+.add-exercise {
+    background-color: rgb(91, 106, 107);
+    color: white;
+    border: none;
+}
+
+.record-nutrition {
+    background-color: rgb(91, 106, 107);
+    color: white;
+    border: none;
+}
+
+.log-sleep {
+    background-color: rgb(91, 106, 107);
+    color: white;
+    border: none;
+}

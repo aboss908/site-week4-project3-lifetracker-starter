@@ -1,0 +1,69 @@
+.sleep-card {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#sleep-date {
+    text-align: center;
+    padding-right: 225px;
+    margin-bottom: 10px;
+}
+
+.sleep-card-container {
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(86, 145, 145);
+    border-radius: 8px;
+    width: 350px;
+    height: 195px;
+}
+
+.sleep-title {
+    display: flex;
+    padding-top: 30px;
+    padding-left: 30px;
+    height: 50px;
+}
+
+.sleep-title p {
+    margin: 0px;
+    padding-top: 9px;
+    padding-left: 10px;
+    font-size: 30px;
+    color: white;
+}
+
+.sleep-logo {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    background-color: rgba(42, 59, 206, 0.808);
+    font-size: 25px;
+    color: white;
+    width: 50px;
+    line-height: 50px;
+}
+
+.sleep-stats {
+    display: flex;
+    color: white;
+    padding-top: 35px;
+    padding-left: 32px;
+}
+
+.sleep-stats h3 {
+    font-size: 17px;
+    margin: 0px;
+    padding-top: 5px;
+    padding-right: 30px;
+}
+
+.sleep-stats p {
+    margin: 0px;
+    text-align: left;
+}
+
+.start {
+    display: block;
+    padding-right: 80px;
+}

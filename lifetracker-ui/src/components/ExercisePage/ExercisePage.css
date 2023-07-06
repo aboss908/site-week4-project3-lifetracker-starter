@@ -1,6 +1,34 @@
-.ExercisePage .button {
-  display: flex;
+.exercise-page {
+  text-align: center;
 }
-.ExercisePage .button button {
-  flex: 1;
+
+.exercise-container {
+  margin-top: 40px;
+}
+
+.exercise-hero {
+  background-color: rgb(20, 99, 79);
+  text-align: center;
+  height: 250px;
+  margin-bottom: 40px;
+}
+
+.exercise-hero h1 {
+  padding-top: 95px;
+  color: white;
+  font-size: 50px;
+}
+
+.exercise-page button {
+  border: none;
+  border-radius: 2px;
+  width: 200px;
+  height: 40px;
+  font-size: 17px;
+  background-color: rgb(126, 139, 139);
+  color: white;
+}
+
+.exercise-page button:active {
+  background-color: black;
 }

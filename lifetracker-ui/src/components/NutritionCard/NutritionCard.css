@@ -1,0 +1,70 @@
+.nutrition-card {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#nutrition-date {
+    margin-bottom: 10px;
+    padding-right: 325px;
+}
+
+.nutrition-card-container {
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(35, 80, 80);
+    border-radius: 8px;
+    width: 450px;
+    height: 225px;
+}
+
+.nutrition-title {
+    display: flex;
+    padding-top: 30px;
+    padding-left: 30px;
+    height: 60px;
+}
+
+.nutrition-title p {
+    margin: 0px;
+    padding-top: 12px;
+    padding-left: 10px;
+    font-size: 33px;
+    color: white;
+}
+
+.logo {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    background-color: rgba(132, 198, 255, 0.808);
+    font-size: 30px;
+    color: white;
+    width: 60px;
+    line-height: 60px;
+}
+
+.nutrition-stats {
+    display: flex;
+    color: white;
+    padding-top: 40px;
+    padding-left: 32px;
+}
+
+.nutrition-stats h3 {
+    font-size: 25px;
+    margin: 0px;
+    text-align: left;
+    padding-top: 5px;
+    padding-right: 30px;
+}
+
+.nutrition-stats p {
+    margin: 0px;
+    text-align: left;
+}
+
+.calories {
+    display: block;
+    padding-right: 200px;
+}
