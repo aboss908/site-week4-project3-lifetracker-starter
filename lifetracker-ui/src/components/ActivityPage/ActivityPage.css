@@ -29,6 +29,11 @@
     max-width: 1000px;
 }
 
+.top-info p {
+    margin: 0;
+    padding: 0;
+}
+
 .button {
     border-radius: 5px;
     margin-left: 5px;
@@ -58,4 +63,9 @@
     background-color: rgb(91, 106, 107);
     color: white;
     border: none;
+}
+
+.activity-restrict {
+    margin: 0px;
+    padding-top: 0px; 
 }

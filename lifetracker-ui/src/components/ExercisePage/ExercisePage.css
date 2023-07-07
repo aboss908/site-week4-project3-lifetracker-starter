@@ -32,3 +32,8 @@
 .exercise-page button:active {
   background-color: black;
 }
+
+.restricted {
+  text-align: center;
+  margin-top: 40px;
+}

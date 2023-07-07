@@ -35,3 +35,7 @@
 .sleep-page button:active {
   background-color: black;
 }
+
+.restricted {
+  text-align: center;
+}

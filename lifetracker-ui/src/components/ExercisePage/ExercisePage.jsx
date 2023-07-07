@@ -1,39 +1,30 @@
 import "./ExercisePage.css"
 import ExerciseCard from "../ExerciseCard/ExerciseCard"
 
-export default function ExercisePage() {
+export default function ExercisePage(props) {
     return (
-        <div className = "exercise-page">
-            <div className = "exercise-hero">
-                <h1> Exercise </h1>
-            </div>
-            <button> Add an Exercise </button>
-            <div className="exercise-container">
-                <ExerciseCard
-                time = "Today at 9:20 PM" 
-                logo = "S" 
-                title = "Soccer" 
-                duration = "15" 
-                intensity = "9"/>
-                <ExerciseCard
-                time = "Today at 8:34 PM" 
-                logo = "R" 
-                title = "Running" 
-                duration = "30" 
-                intensity = "10"/>
-                <ExerciseCard
-                time = "Today at 3:18 PM" 
-                logo = "F" 
-                title = "Football" 
-                duration = "120" 
-                intensity = "8.5"/>
-                <ExerciseCard
-                time = "Today at 4:13 AM" 
-                logo = "S" 
-                title = "Swimming" 
-                duration = "45" 
-                intensity = "10"/>
-            </div>
+        <div>
+            {props.isLoggedIn ? ( 
+                <div className = "exercise-page">
+                    <div className = "exercise-hero">
+                        <h1> Exercise </h1>
+                    </div>
+                    <button> Add an Exercise </button>
+                    <div className="exercise-container">
+                        {props.exercises.map((element, index) => {
+                            return <ExerciseCard
+                            key = {element + index}
+                            time = {element.date.substring(0,10) + "  (" + element.date.substring(12, 16) + ")"} 
+                            logo = {element.exercise_name.charAt(0).toUpperCase()}
+                            title = {element.exercise_name} 
+                            duration = {element.duration} 
+                            intensity = {element.intensity}/>
+                        })}
+                    </div>
+                </div>
+            ) : (
+                <h1 className = "restricted"> Log in to view your data. </h1>
+            )}
         </div>
     )
 }

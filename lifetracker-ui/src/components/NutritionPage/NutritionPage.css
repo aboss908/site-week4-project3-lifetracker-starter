@@ -32,3 +32,7 @@
 .nutrition-container {
   padding-top: 20px;
 }
+
+.restricted {
+  text-align: center;
+}
