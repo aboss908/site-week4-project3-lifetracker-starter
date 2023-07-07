@@ -9,6 +9,7 @@ class User {
     static async makeUser(user) {
         return ({
             id: user.id,
+            username: user.username,
             first_name: user.first_name,
             last_name: user.last_name,
             email: user.email,
@@ -37,7 +38,7 @@ class User {
     }
 
     static async register(credentials) {
-        const requiredFields = ["email", "password", "first_name", "last_name"]
+        const requiredFields = ["username", "email", "password", "first_name", "last_name"]
 
         requiredFields.forEach((element) => {
             if (!credentials.hasOwnProperty(element)) {
@@ -53,8 +54,8 @@ class User {
 
         const hashedPass = await bcrypt.hash(credentials.password, parseInt(BCRYPT_WORK_FACTOR))
 
-        const query = "INSERT INTO users (first_name, last_name, email, password) VALUES ($1, $2, $3, $4) RETURNING *;"
-        const {rows} = await db.query(query, [credentials.first_name, credentials.last_name, credentials.email, hashedPass])
+        const query = "INSERT INTO users (first_name, last_name, email, password, username) VALUES ($1, $2, $3, $4, $5) RETURNING *;"
+        const {rows} = await db.query(query, [credentials.first_name, credentials.last_name, credentials.email, hashedPass, credentials.username])
         return rows ? rows[0]: undefined
     }
 
@@ -76,7 +77,7 @@ class User {
             email: user.email
         }
 
-        const token = jwt.sign(payload, SECRET_KEY, {expiresIn: "1hr"})
+        const token = jwt.sign(payload, SECRET_KEY, {expiresIn: "6hr"})
         return token
     }
 

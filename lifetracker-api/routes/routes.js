@@ -6,6 +6,8 @@ const Exercise = require("../models/exercise")
 const Nutrition = require("../models/nutrition")
 const Sleep = require("../models/sleep")
 
+// localStorage.getItem("token")
+
 // Assuming that the security middleware is checked out, return all the information
 // about the total exercise minutes, daily calories, average hours of sleep.
 router.get("/activity", async (req,res,next) => {

@@ -3,7 +3,7 @@ const User = require("../models/user")
 const authenticateJWT = async (req,res,next) => {
     // Extracting the JWT token from the request
     const token = req.headers.authorization
-    const[scheme, theToken] = token.split(" ")
+    const[scheme, theToken] = token?.split(" ")
 
     if (scheme !== "Bearer" || !theToken) {
         return res.status(401).json({error: "Unauthorized: Missing authorization token."})
