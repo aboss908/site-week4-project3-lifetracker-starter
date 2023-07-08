@@ -2,12 +2,10 @@ const express = require('express')
 const app = express()
 const {PORT} = require('./config/config')
 const morgan = require('morgan')
-const cors = require('cors')
 const auth = require('./routes/auth')
 const router = require('./routes/routes')
 const {NotFoundError} = require("./utils/errors")
 
-app.use(cors())
 app.use(express.json())
 app.use(morgan('tiny'))
 
