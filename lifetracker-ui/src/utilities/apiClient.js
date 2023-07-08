@@ -18,6 +18,7 @@ let headers = ({
 const request = async (method, url, body = null) => {
 
     const options = body ? { method, headers, body: JSON.stringify(body) } : { method, headers }
+
     let response = null
 
     try {
