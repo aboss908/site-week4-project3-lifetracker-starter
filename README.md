@@ -50,6 +50,12 @@ Implement any of the following features to improve the application:
 - [ ] Create a page that shows all other users that use the LifeTracker application and allow users to follow each other. You'll want to create a new table to store this data.
 - [X] Implement `security` middleware on the API that allows only authenticated users to access resources and allows users to only access resources about themselves.
 
+### Links
+
+https://www.loom.com/share/1bf9e32c21004b0086298e4ae604af02?sid=212925a6-d043-4fe5-942b-7a8bead12f29
+
+https://abbasfrontendservice.onrender.com/
+
 ### Building the app
 
 #### The `App` Component
