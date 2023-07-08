@@ -1,17 +1,20 @@
 const express = require("express")
 const router = express.Router()
-const {UnauthorizedError} = require("../utils/errors")
 const {authenticateJWT} = require("../middleware/security")
 const Exercise = require("../models/exercise")
 const Nutrition = require("../models/nutrition")
 const Sleep = require("../models/sleep")
-
-// localStorage.getItem("token")
+const Activity = require("../models/activity")
 
 // Assuming that the security middleware is checked out, return all the information
 // about the total exercise minutes, daily calories, average hours of sleep.
-router.get("/activity", async (req,res,next) => {
-    
+router.get("/activity", authenticateJWT, async (req,res,next) => {
+    try {
+        const response = await Activity.grabActivities(req.user.email)
+        res.status(200).json(response)
+    } catch (error) {
+        next(error)
+    }
 })
 
 // This should return the list of information of each exercise done, using the

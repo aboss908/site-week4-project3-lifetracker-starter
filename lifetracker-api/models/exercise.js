@@ -8,8 +8,9 @@ class Exercise {
         if (user) {
             const query = `
             SELECT * FROM exercise_log WHERE UserID = (
-                SELECT id FROM users WHERE email = $1    
-            )`
+                SELECT id FROM users WHERE email = $1   
+            )
+            ORDER BY date DESC`
             const {rows} = await db.query(query, [email])
             return rows
         }

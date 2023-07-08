@@ -9,7 +9,8 @@ class Nutrition {
             const query = `
             SELECT * FROM nutrition_log WHERE UserID = (
                 SELECT id FROM users WHERE email = $1    
-            )`
+            )
+            ORDER BY date DESC`
             const {rows} = await db.query(query, [email])
             return rows
         }

@@ -1,6 +1,11 @@
 const express = require("express")
 const auth = express.Router()
 const User = require("../models/user")
+const {authenticateJWT} = require("../middleware/security")
+
+auth.get("/me", authenticateJWT, async (req,res,next) => {
+    res.status(200).json({message: "Successfully connected"})
+})
 
 auth.post("/login", async (req, res, next) => {  
     try {
