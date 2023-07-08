@@ -1,6 +1,6 @@
 import './App.css'
 import * as React from "react"
-import {HashRouter, Routes, Route} from "react-router-dom"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 import {useState, useEffect} from "react"
 import Navbar from "../Navbar/Navbar.jsx"
 import Home from "../Home/Home.jsx"
@@ -68,7 +68,7 @@ function App() {
 
   return (
     <div className = "App">
-      <HashRouter>
+      <BrowserRouter>
         <Navbar
           isLoggedIn = {isLoggedIn}
           setLoggedIn = {setLoggedIn}
@@ -142,7 +142,7 @@ function App() {
 
           <Route path = "*" element = {<h1 className = "restricted"> 404 NOT FOUND </h1>}/>
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   )
 }
