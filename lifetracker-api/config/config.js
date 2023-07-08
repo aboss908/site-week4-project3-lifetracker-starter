@@ -11,7 +11,7 @@ function getDatabaseURI() {
     // const dbPort = process.env.DATABASE_PORT || 5432
     // const dbName = process.env.DATABASE_NAME || postgres
 
-    return process.env.DATABASE_URL || `postgresql://${dbUser}:${dbPass}@${dbHost}:${dbPort}/${dbName}`
+    return process.env.DATABASE_URL
 }
 
 module.exports = {
