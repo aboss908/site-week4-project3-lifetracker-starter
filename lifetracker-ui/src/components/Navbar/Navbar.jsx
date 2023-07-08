@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 export default function Navbar(props) {
     const handleLogOut = function() {
         localStorage.setItem("lifetracker_token", null)
-        props.resetEverything()
+        props.reset()
         window.location.href = "/"
     }
 

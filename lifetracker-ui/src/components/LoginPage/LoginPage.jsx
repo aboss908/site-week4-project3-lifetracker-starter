@@ -2,6 +2,7 @@ import "./LoginPage.css"
 import userIcon from "../../assets/usericon.png"
 import {useState} from "react"
 import {request, apiBaseURL, apiLogInURL, fixToken} from "../../utilities/apiClient"
+import {getExercises, getNutrition, getSleep} from "../../utilities/apiClient"
 
 export default function LoginPage(props) {
     const[form, setForm] = useState(
@@ -20,8 +21,17 @@ export default function LoginPage(props) {
 
         if (response) {
             const token = fixToken(response.token)
-            localStorage.setItem("lifetracker_token", token)
+            localStorage.setItem('lifetracker_token', token)
             window.location.href = "/activity"
+            await getExercises().then((list) => {
+                props.setExercises(list)
+            })
+            await getNutrition().then((list) => {
+                props.setNutritions(list)
+            })
+            await getSleep().then((list) => {
+                props.setSleep(list)
+            })
         } else {
             alert("Invalid credentials.")
         }

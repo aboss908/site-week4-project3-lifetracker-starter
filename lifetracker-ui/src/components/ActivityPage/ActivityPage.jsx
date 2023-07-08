@@ -18,9 +18,9 @@ export default function ActivityPage(props) {
                 </div>
             </div>
             <div className = "tiles-container">
-                <FeedTiles title = "Total Exercise Minutes" info = "83.0" type = "tile exercise"/>
-                <FeedTiles title = "Most Hours of Sleep" info = "11.0" type = "tile sleep"/>
-                <FeedTiles title = "Average Calories Per Meal" info = "362.0" type = "tile nutrition"/>
+                <FeedTiles title = "Total Exercise Minutes" activity = {props.activity.totalMinutes?.toFixed(1)} type = "tile exercise"/>
+                <FeedTiles title = "Most Hours of Sleep" activity = {props.activity.maxSleep?.toFixed(1)} type = "tile sleep"/>
+                <FeedTiles title = "Average Calories Per Meal" activity = {props.activity.averageCalories?.toFixed(1)} type = "tile nutrition"/>
             </div>
         </div>
         ) : (

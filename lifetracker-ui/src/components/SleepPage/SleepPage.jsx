@@ -1,5 +1,6 @@
 import "./SleepPage.css"
 import SleepCard from "../SleepCard/SleepCard"
+import { Link } from "react-router-dom"
 
 export default function SleepPage(props) {
     return (
@@ -9,7 +10,7 @@ export default function SleepPage(props) {
                 <div className = "sleep-hero">
                     <h1> Sleep </h1>
                 </div>
-                <button> Add Sleep </button>
+                <Link to ="/sleep/form"> <button>Add Sleep</button> </Link>
                 {props.sleep.map((element, index) => {
                     return <SleepCard
                     key = {element + index}

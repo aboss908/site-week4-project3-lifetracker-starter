@@ -10,7 +10,7 @@ class ApiError extends Error {
     }
 }
 
-const headers = ({
+let headers = ({
     'Content-Type': 'application/json',
     'authorization': localStorage.getItem('lifetracker_token')
 })
@@ -18,7 +18,6 @@ const headers = ({
 const request = async (method, url, body = null) => {
 
     const options = body ? { method, headers, body: JSON.stringify(body) } : { method, headers }
-  
     let response = null
 
     try {
@@ -54,9 +53,22 @@ const getSleep = async function() {
   return response
 }
 
+const getActivity = async function() {
+  const response = await request('GET', `${apiBaseURL}/tracker/activity`)
+  return response  
+}
+
+const getUser = async function() {
+  try {
+    const response = await request('GET',`${apiBaseURL}/auth/me`)
+    return response
+  } catch(error) {
+    return null
+  }
+}
+
 const fixToken = function (token) {
   const fixedToken = "Bearer " + token
-  console.log(fixedToken)
   return fixedToken
 }
 
@@ -69,5 +81,7 @@ export {
     fixToken,
     getExercises,
     getNutrition,
-    getSleep
+    getSleep,
+    getUser,
+    getActivity
 }

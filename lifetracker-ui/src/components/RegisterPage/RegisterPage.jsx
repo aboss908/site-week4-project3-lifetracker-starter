@@ -3,6 +3,7 @@ import userIcon from "../../assets/usericon.png"
 import {useState} from "react"
 import {Link} from "react-router-dom"
 import {request, apiBaseURL, fixToken, apiRegisterURL, apiLogInURL} from "../../utilities/apiClient"
+import {getExercises, getNutrition, getSleep} from "../../utilities/apiClient"
 
 export default function RegisterPage(props) {
     const[form, setForm] = useState(
@@ -40,8 +41,21 @@ export default function RegisterPage(props) {
 
             if (logInResponse) {
                 const token = fixToken(logInResponse.token)
-                localStorage.setItem("lifetracker_token", token)
+                localStorage.setItem('lifetracker_token', token)
                 window.location.href = "/activity"
+                try {
+                    await getExercises().then((list) => {
+                        props.setExercises(list)
+                    })
+                    await getNutrition().then((list) => {
+                        props.setNutritions(list)
+                    })
+                    await getSleep().then((list) => {
+                        props.setSleep(list)
+                    })
+                } catch (error) {
+                    console.log(error)
+                }
             }
         } else {
             alert("Please check that your email is valid, the form is filled up, or an account was already created with that email.")
